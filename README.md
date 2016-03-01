@@ -1,6 +1,6 @@
 # MariaDB 10.1 Galera cluster on Ubuntu 14.04
 
-MariaDB 10.1 with the build in Galera software. This Docker sets up a 3 node cluster fully operational. Perfect for testing. You can adjust the IP's by editing the docker run and the my.cnf. In this sample 172.17.0.10, 172.17.0.11 and 172.17.0.12 is used.
+MariaDB 10.1 with the buildin Galera software. This Docker sets up a 3 node cluster fully operational perfect for testing. You can adjust the IP's by editing the docker run and the my.cnf. In this sample 172.17.0.10, 172.17.0.11 and 172.17.0.12 is used.
 
 # Get the Docker image 
 `docker pull howrude/mariadb-10.1-galera`  
