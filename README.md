@@ -1,8 +1,9 @@
 [MariaDB] (https://mariadb.org/mariadb-10-1-1-galera-support/) 10.1 Galera cluster on Ubuntu 14.04
 --------------------------------------------------------------------------------------------------
 
-=======
+
 # MariaDB 10.1 Galera cluster on Ubuntu 14.04
+=============================================
 
 MariaDB 10.1 with the buildin Galera software. This Docker sets up a 3 node cluster fully operational perfect for testing. You can adjust the IP's by editing the docker run and the my.cnf. In this sample 172.17.0.10, 172.17.0.11 and 172.17.0.12 is used. Default user is root and the password is blank.
 
@@ -37,14 +38,20 @@ docker exec -ti galeranode2 service mysql start
 Check you cluster size
 ======================
 
-With the command below you can check the cluster size, wich should be 3.
-`docker exec -ti galeranode1 mysql -e 'show status like "wsrep_cluster_size"'`
+With the command below you can check the cluster size, wich should be 3.  
+```bash
+docker exec -ti galeranode1 mysql -e 'show status like "wsrep_cluster_size"'
+```
 
 Login into the nodes
 ====================
 
 You can login into the nodes with bash using the command below.  
-`docker exec -ti galeranode2 /bin/bash`  
-and run a SQL command using
-`mysql -h galeranode0 -u root -p`  
+```bash
+docker exec -ti galeranode2 /bin/bash
+```
+and run a SQL command using  
+```bash
+mysql -h galeranode0 -u root -p
+```
 with this you can see that all commands are replicated
