@@ -25,7 +25,7 @@ With the command below you can check the cluster size, wich should be 3.
 `docker exec -ti galeranode1 mysql -e 'show status like "wsrep_cluster_size"'`
 
 # Login into the nodes
-You can login into the nodes with bash using the command below.
+You can login into the nodes with bash using the command below.  
 `docker exec -ti galeranode2 /bin/bash`  
 and run a SQL command using
 `mysql -h galeranode0 -u root -p`  
