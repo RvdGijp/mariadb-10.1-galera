@@ -16,11 +16,11 @@ or make it yourelf with the Dockerfile
 `docker run --cap-add=NET_ADMIN --add-host galeranode0:172.17.0.10 --add-host galeranode1:172.17.0.11 --add-host galeranode2:172.17.0.12 --name=galeranode0 -h galeranode0 -dit galera /bin/sh -c "/sbin/ip addr add 172.17.0.10 dev eth0; bash"`  
 `docker exec -ti galeranode0 service mysql bootstrap`
 
-## start the second node (galeranode1 - 172.17.0.11)
+### start the second node (galeranode1 - 172.17.0.11)
 `docker run --cap-add=NET_ADMIN --add-host galeranode0:172.17.0.10 --add-host galeranode1:172.17.0.11 --add-host galeranode2:172.17.0.12 --name=galeranode1 -h galeranode1 -dit galera /bin/sh -c "/sbin/ip addr add 172.17.0.11 dev eth0; bash"`  
 `docker exec -ti galeranode1 service mysql start`
 
-## start the third node (galeranode2 - 172.17.0.12)
+### start the third node (galeranode2 - 172.17.0.12)
 `docker run --cap-add=NET_ADMIN --add-host galeranode0:172.17.0.10 --add-host galeranode1:172.17.0.11 --add-host galeranode2:172.17.0.12 --name=galeranode2 -h galeranode2 -dit galera /bin/sh -c "/sbin/ip addr add 172.17.0.12 dev eth0; bash"`  
 `docker exec -ti galeranode2 service mysql start`
 
