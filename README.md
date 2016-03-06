@@ -1,4 +1,4 @@
-[MariaDB] (https://mariadb.org/mariadb-10-1-1-galera-support/) 10.1 Galera cluster on Ubuntu 14.04
+[MariaDB 10.1] (https://mariadb.org/mariadb-10-1-1-galera-support/) [Galera cluster] (https://github.com/codership/galera) on [Ubuntu 14.04] (http://releases.ubuntu.com/14.04/)
 --------------------------------------------------------------------------------------------------
 
 MariaDB 10.1 with the buildin Galera software. This Docker sets up a 3 node cluster fully operational perfect for testing. You can adjust the IP's by editing the docker run and the my.cnf. In this sample 172.17.0.10, 172.17.0.11 and 172.17.0.12 is used. Default user is root and the password is blank.
